@@ -1,28 +1,27 @@
 # USE.JS
 A simple asynchronous javascript module loader
 
-## Examples
+### Examples
 
-
-Let use.js know where your modules are located
+#### Let use.js know where your modules are located
 
 	use.setup({
 		path: 'path/to/modules/'
 	});
 
 
-Really simple module loading
+#### Really simple module loading
 
 	use('somemodule');
 
-Module with callback
+#### Module with callback
 
 	use('somemodule', function(module) {
 		//callback
 		module.somefunction();
 	});
 
-Multiple modules with callback
+#### Multiple modules with callback
 
 	use('firstmodule secondmodule thirdmodule', function(first, second, third) {
 		first.init();
@@ -30,3 +29,8 @@ Multiple modules with callback
 		third.getSome();
 	});
 
+
+### Stuff to do
+
+* Pub/sub to decouple the modules
+* Combine and minify the modules if needed
