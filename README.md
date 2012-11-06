@@ -1,4 +1,4 @@
-=== USE.JS ===
+### USE.JS
 A simple asynchronous javascript module loader
 	
 	use.setup({
