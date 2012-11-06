@@ -12,29 +12,34 @@ use.setup({
 
 
 #### Really simple module loading
+
 ```js
 use('somemodule');
 ```
 
 #### Module with callback
+
 ```js
 use('somemodule', function(module) {
 	//callback
 	module.somefunction();
 });
+
 ```
 
 #### Multiple modules with callback
+
 ```js
 use('firstmodule secondmodule thirdmodule', function(first, second, third) {
 	first.init();
 	second.doSomething();
 	third.getSome();
 });
-``
+```
 
 
 #### Example of a module
+
 ```js
 use.module.demomodule = (function() {
 	"use strict";
