@@ -5,43 +5,46 @@ A simple asynchronous javascript module loader
 
 #### Let use.js know where your modules are located
 ```js
-	use.setup({
-		path: 'path/to/modules/'
-	});
+use.setup({
+	path: 'path/to/modules/'
+});
 ```
 
 
 #### Really simple module loading
-
-	use('somemodule');
+```js
+use('somemodule');
+```
 
 #### Module with callback
-
-	use('somemodule', function(module) {
-		//callback
-		module.somefunction();
-	});
+```js
+use('somemodule', function(module) {
+	//callback
+	module.somefunction();
+});
+```
 
 #### Multiple modules with callback
-
-	use('firstmodule secondmodule thirdmodule', function(first, second, third) {
-		first.init();
-		second.doSomething();
-		third.getSome();
-	});
+```js
+use('firstmodule secondmodule thirdmodule', function(first, second, third) {
+	first.init();
+	second.doSomething();
+	third.getSome();
+});
+``
 
 
 #### Example of a module
 ```js
-	use.module.demomodule = (function() {
-		"use strict";
-		var someFunction = function() {
-			console.log("log from demomodule.js");
-		};
-		return {
-			someFunction: someFunction
-		};
-	}());
+use.module.demomodule = (function() {
+	"use strict";
+	var someFunction = function() {
+		console.log("log from demomodule.js");
+	};
+	return {
+		someFunction: someFunction
+	};
+}());
 ```
 
 ### Stuff to do
