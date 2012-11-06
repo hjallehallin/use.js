@@ -2,7 +2,7 @@
 (function($) {
 	"use strict";
 	use.setup({
-		path: 'path/to/modules'
+		path: 'modules/'
 	});
 	use('demomodule', function(module) {
 		module.someFunction();
