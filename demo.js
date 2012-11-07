@@ -4,9 +4,8 @@
 	use.setup({
 		path: 'modules/'
 	});
+	
 	use('demomodule', function(module) {
 		module.someFunction();
 	});
-
-
 }(jQuery));
